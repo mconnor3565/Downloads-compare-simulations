@@ -29,7 +29,7 @@ point2 = Newman(20)
 
 plt.plot(p_exper, D1, label = "Tirado Garcia")
 plt.plot(p_exper, D2, label = "Newman")
-plt.plot(20,point1,'-ro', label=r'$20 = {}$'.format(point2))
+plt.plot(20,point1,'-ro', label=r'$20 = {}$'.format(point1))
 plt.plot(20,point2, '-go', label=r'$20 = {}$'.format(point2))
 plt.xlabel(r'$p$')
 plt.ylabel(r'$D_{rot}\,(\mu m^{2} s^{-1})$')

@@ -11,22 +11,27 @@ p_exper = np.linspace(4.6,30,300)
 
 def TiradoGarcia(p):
     v_perp = 0.839 + (0.185/p) + (0.233/(p**2))
-    l = p_exper*2*(d)
+    l = p*2*(d)
     D_perp = ((np.log(p) + v_perp)*kB*T)/(4*math.pi*eta*l)
     return D_perp
 
 def Newman(p):
     v_perp = 0.866 -(0.15/(np.log(2*p))) - (8.1/(np.log(2*p)**2)) + (18/(np.log(2*p)**3)) - (9/(np.log(2*p)**4))
-    l = p_exper*2*(d)
+    l = p*2*(d)
     D_perp = ((np.log(p) + v_perp)*kB*T)/(4*math.pi*eta*l)
     return D_perp
 
 D1 = TiradoGarcia(p_exper) 
 D2 = Newman(p_exper) 
 
+point1 = TiradoGarcia(20)
+point2 = Newman(20) 
+
 
 plt.plot(p_exper, D1, label = "Tirado Garcia")
 plt.plot(p_exper, D2, label = "Newman")
+plt.plot(20,point1,'-ro', label = "TiradoGarcia")
+plt.plot(20,point2, '-go', label = "Newman")
 plt.xlabel(r'$p$')
 plt.ylabel(r'$D_{perpendicular}\,(\mu m^{2} s^{-1})$')
 plt.legend(title=r'$\,(nm)$')

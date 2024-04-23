@@ -37,7 +37,7 @@ plt.plot(20,point1,'-ro', label=r'$20 = {}$'.format(point1))
 plt.plot(20,point2, '-go', label=r'$20 = {}$'.format(point2))
 plt.xlabel(r'$p$')
 plt.ylabel(r'$D_{avg}\,(\mu m^{2} s^{-1})$')
-plt.legend(title=r'$\,(nm)$')
+plt.legend(title=r'$\,(n)$')
 plt.title("D_avg vs. p")
 plt.savefig("plots/plot_Davg.pdf", format="pdf", bbox_inches="tight")
 

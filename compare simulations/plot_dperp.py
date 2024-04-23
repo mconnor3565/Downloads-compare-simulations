@@ -27,7 +27,6 @@ D2 = Newman(p_exper)
 point1 = TiradoGarcia(20)
 point2 = Newman(20) 
 
-
 plt.plot(p_exper, D1, label = "Tirado Garcia")
 plt.plot(p_exper, D2, label = "Newman")
 plt.plot(20,point1,'-ro', label=r'$20 = {}$'.format(point1))
